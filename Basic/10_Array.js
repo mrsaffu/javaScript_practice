@@ -111,4 +111,104 @@ console.log(uyt);
 console.log(mnj);
 // console.log(object);
 
-//  findIndex()
+//  findIndex() :- it is used to find the element based on the condition if the condition is satisfied it return that value of index position , and if the condition is not satisfied it return the -1
+
+console.log("************findIndex ************");
+let array10 = [10,20,30,40,50]
+console.log(array10);
+let result1= array10.findIndex((a)=>{
+    console.log(a);
+    return a>20;
+})
+console.log("Array = ",array10);
+console.log("result = ",result1,);
+
+//Some . it return true or false based on the  condition. but it check the all value and the anu one value is satisfied it will return true.
+console.log("********* some ********");
+let array11=[1,2,3,2,4,5,2]
+console.log(array11);
+let occ =1;
+let result2 = array11.every
+((a)=>{
+    console.log(a);
+    return a<4
+}) 
+console.log(result2);
+
+// every() :- the every method execute the function for each array element. 
+// it return the true if the every element satisfied based on the condition, 
+// if the any one condition is not satisfied it will return the false.
+
+console.log("********every()********");
+let array12 = [100,10,20,30,40,50]
+console.log(array12);
+let result3 = array12.every((a)=>{
+    console.log("iteration = ",a);
+    return a<110;
+})
+console.log(result3);
+
+// map() :- it specified the array of element and perform some expression on elements.
+// it create the new array for calling a function of array element.
+// it dose not effect the array element. 
+console.log("********* map() *********");
+let array13 = [10,20,30,40];
+console.log(array13);
+let result4 = array13.map((a)=>{
+    console.log("iteration = ",a);
+    return a+"Arry";
+})
+console.log(result4);
+// its have 3 arguments: value, index , array.
+console.log("-------- map(arguments)----------");
+array.map((value,element,array)=>{
+    console.log(value , element, array);
+})
+
+// filter() :- it specified the array of element.
+// it return all  satisfied condition value.
+// it doesn't effect the original array.
+console.log("------------- filter() --------------");
+const array14=[10,20,30,40]
+console.log(array14);
+let result5 = array14.filter((value,index,array)=>{
+    console.log("iteration value  ",value," index ",index, " array ",array);
+    return value>22;
+})
+console.log("result",result5);
+console.log(array14);
+
+
+// reduce : it execute the reduce function for an array.
+//          it return the single value the function accumulated result.
+//          it dose not change the original array.
+console.log("-------------- reduce() ------------");
+let array15= [10,15,20,30,40]
+console.log(array15);
+let result6= array15.reduce((a,b)=>{
+    console.log("a=",a);
+    console.log("B=",b);
+    return a+b;
+})
+console.log(result6);
+
+// for each loop :- it perform specified action for each element .
+//                  we should avoid return statement inside the foreach(). if we will use it will return undefined.
+//                  mostly it is used for console statement inside 
+
+let array16=[10,20,30,40]
+console.log(array16);
+array16.forEach((a)=>{
+    console.log(a);
+    console.log(a+10+"hii");
+})
+
+// short() :- it is used to short the data (acceding or deciding).
+console.log("---------- sort() --------------");
+let array17 =[10,40,20,70,50,100,2,45]
+console.log(array17);
+let result7= array17.sort((a,b)=>{
+return a-b ,b-a;
+
+})
+console.log(result7);
